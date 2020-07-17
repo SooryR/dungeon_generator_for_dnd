@@ -13,12 +13,6 @@ public class Chamber extends Space {
     private ArrayList<Monster> myMonsters;
     private ArrayList<Treasure> myTreasure;
     private ArrayList<Door> doorList;
-    /******************************
-     Required Methods for that we will test during grading
-    *******************************/
-    /* note:  Some of these methods would normally be protected or private, but because we
-    don't want to dictate how you set up your packages we need them to be public
-    for the purposes of running an automated test suite (junit) on your code.  */
 public Chamber() {
     myContents = new ChamberContents();
     doorList = new ArrayList<Door>();
@@ -103,11 +97,7 @@ public void setDoor(Door newDoor) {
         doorList.add(newDoor);
         newDoor.addOneSpaces(this);
     }
-    //should add a door connection to this room
 }
-/***********
-You can write your own methods too, you aren't limited to the required ones.
-*************/
 private void setContants() {
     myContents.chooseContents(Die.d20());
 }

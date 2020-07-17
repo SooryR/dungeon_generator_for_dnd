@@ -11,12 +11,6 @@ public class PassageSection {
     private boolean deadEnd;
     private String descriptionP;
     private Stairs pStairs;
-    /******************************
-     Required Methods for that we will test during grading
-    *******************************/
-    /* note:  Some of these methods would normally be protected or private, but because we
-    don't want to dictate how you set up your packages we need them to be public
-    for the purposes of running an automated test suite (junit) on your code.  */
 public PassageSection() {
     isdoor = false;
     thedoor = null;

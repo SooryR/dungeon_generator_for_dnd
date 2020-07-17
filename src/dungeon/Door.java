@@ -72,10 +72,6 @@ public class Door {
             createOpened();
         }
     }
-    /* note:  Some of these methods would normally be protected or private, but because we
-    don't want to dictate how you set up your packages we need them to be public
-    for the purposes of running an automated test suite (junit) on your code.  */
-    /*I made this public to it can be tested else it will be protected so that my classes will use it*/
     /**
      * Used to set up the trap of the room.
      @param flag is used to set the trap to exist or not.
@@ -158,12 +154,11 @@ public class Door {
             return null;
         }
     }
-    /*I made this public to it can be tested else it will be protected so that my classes will use it*/
     /**
      * Used to get the spaces conected to this door.
      @return the arraylist of spaces that this door conectes to.
      */
-    public ArrayList<Space> getSpaces() {
+    private ArrayList<Space> getSpaces() {
         //returns the two spaces that are connected by the door
         return myConections;
     }
@@ -179,7 +174,6 @@ public class Door {
             spaceTwo.setDoor(this);
         }
     }
-    /*I made this public to it can be tested else it will be protected so that my classes will use it*/
     /**
      * Used to get the description of the door.
      @return the descreption.
@@ -202,9 +196,6 @@ public class Door {
         }
         return doorDes;
     }
-/***********
-You can write your own methods too, you aren't limited to the required ones.
-*************/
     //sets if it is locked
     private void setLocked() {
         if (Die.d6() == 1) {
@@ -220,7 +211,6 @@ You can write your own methods too, you aren't limited to the required ones.
             setOpen(false);
         }
     }
-    /*I made this public to it can be tested else it will be protected so that my classes will use it*/
     /**
      * Used to conect one space to this door.
      @param spaceOne is the space that is going to connect to this door.
@@ -231,7 +221,6 @@ You can write your own methods too, you aren't limited to the required ones.
             spaceOne.setDoor(this);
         }
     }
-    /*I made this public to it can be tested else it will be protected so that my classes will use it*/
     /**
      * Used to check is the space the connected to this door.
      @param space is the space that is going to be checked.
